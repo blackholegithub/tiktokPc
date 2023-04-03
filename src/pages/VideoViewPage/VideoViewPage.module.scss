@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+.emopjis-table{
+    position: absolute;
+    z-index: 100;
+    right: 110px;
+    bottom: 55px;
+
+}
+
+
+
+

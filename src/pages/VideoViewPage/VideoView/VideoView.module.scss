@@ -1,0 +1,221 @@
+.video {
+    max-width: 1150px;
+    color: var(--white);
+    background-color: #1c1a1b;
+    position: relative;
+    flex: 3;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 28px 0px 28px;
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
+    .control {
+        position: absolute;
+        right: 0;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+
+    .report {
+        height: 39px;
+        line-height: 16px;
+        padding: 10px 16px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        border-radius: 100px;
+        cursor: pointer;
+        background-color: rgba(84, 84, 84, 0.5);
+
+        span {
+            margin-left: 4px;
+        }
+    }
+
+    .header-btn {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+
+        .close-Btn {
+            margin-right: 30px;
+        }
+    }
+
+    .arrow-btn {
+        position: relative;
+
+        .up-arrow-btn {
+            position: absolute;
+            top: -30px;
+            right: 0px;
+            transform: rotate(-90deg);
+        }
+
+        .down-arrow-btn {
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            transform: rotate(90deg);
+            color: #fff;
+        }
+    }
+
+    .volume {
+        display: block;
+        margin-left: 57px;
+
+        &:hover {
+            .input-volume {
+                display: flex;
+            }
+        }
+
+        .input-volume {
+            display: none;
+            opacity: 1;
+            width: 30px;
+            height: 78px;
+            margin: 8px 7px;
+            position: relative;
+            cursor: initial;
+            background-color: rgba(84, 84, 84, 0.5);
+            border-radius: 32px;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                -webkit-appearance: none;
+                background-color: #fff;
+                border-radius: 4px;
+                height: 4px;
+                position: absolute;
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                width: 56px;
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(53, 48, 48, 0.5);
+            }
+        }
+
+        .volume-btn {
+            margin-left: 4px;
+        }
+    }
+}
+
+.btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(84, 84, 84, 0.5);
+
+    &:hover {
+        opacity: 0.7;
+        background-color: rgba(37, 37, 37, 0.6);
+    }
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+
+    video {
+        height: 100%;
+        width: auto;
+    }
+
+    .play {
+        position: absolute;
+        margin: auto;
+        color: rgba(220, 175, 175, 0.4);
+        background-color: rgba(93, 66, 66, 0.6);
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+    }
+
+    &:hover {
+        ~ .video-process-control {
+            display: flex;
+        }
+    }
+}
+
+.video-process-control {
+    position: absolute;
+    bottom: 44px;
+    z-index: 3;
+    width: 100%;
+    height: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        display: flex;
+    }
+
+    input {
+        -webkit-appearance: none;
+        background-color: #b0acac;
+        border-radius: 4px;
+        height: 4px;
+        width: 300px;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .video-time {
+        margin-left: 10px;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--white);
+        opacity: 0.8;
+    }
+}
